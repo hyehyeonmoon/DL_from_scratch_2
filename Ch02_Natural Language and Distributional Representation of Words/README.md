@@ -66,6 +66,6 @@ V의 열벡터들이 데이터의 분포를 고려하는 축인 이유
 특이값이 크기순으로 대각행렬을 이룰 경우 u와 v를 정규화된 벡터이므로 내적값은 -1과 1사이의 값을 갖는다.  그러므로 A의 각 성분의 크기는 각 특이값에 의해 정해진다. 따라서, A의 값들의 분포를 생각할 때, 큰 특이값에 대응되는 벡터(축)이 데이터의 분포에 큰 영향을 주는 축인 것을 알 수 있다.
 
 
-**[reference]**
-https://luminitworld.tistory.com/69
+**[reference]**  
+https://luminitworld.tistory.com/69  
 https://www.youtube.com/watch?v=cq5qlYtnLoY&feature=emb_title
