@@ -67,4 +67,5 @@ V의 열벡터들이 데이터의 분포를 고려하는 축인 이유
 
 
 **[reference]**
-![link] https://luminitworld.tistory.com/69
+https://luminitworld.tistory.com/69
+https://www.youtube.com/watch?v=cq5qlYtnLoY&feature=emb_title
