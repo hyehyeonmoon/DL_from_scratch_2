@@ -39,15 +39,14 @@ count_method_big: PTB 데이터셋에 통계 기반 기법을 적용한 코드�
 
 Singular Value Decomposition
 
-$$X = U\Sigma V^T $$
+![image](https://user-images.githubusercontent.com/68596881/105756434-f6c50080-5f8f-11eb-9b57-1be884942172.png)
 
 V가 orthogonal matrix이므로 V의 역행렬(inverse)은 V의 전치행렬(transpose)
 
 따라서, 다음을 만족한다.
+![image](https://user-images.githubusercontent.com/68596881/105756467-03495900-5f90-11eb-86c1-0e40c3962308.png)
 
-$$XV = U\Sigma$$
-
-![Ch_02%20Natural%20Language%20and%20Distributional%20Represen%200b7926973e0148998a8b5206e887722e/C82DFABD-9C82-4AF2-AA74-90C5EF0D155F.jpeg](Ch_02%20Natural%20Language%20and%20Distributional%20Represen%200b7926973e0148998a8b5206e887722e/C82DFABD-9C82-4AF2-AA74-90C5EF0D155F.jpeg)
+![image](https://user-images.githubusercontent.com/68596881/105756547-1ceaa080-5f90-11eb-91a8-2911461adcb0.png)
 
 $obs_i$: i번째 데이터
 
@@ -61,6 +60,6 @@ $\Sigma$는 대각행렬로 scale을 조절하므로 차원 축소된 XV의 코�
 
 V의 열벡터들이 데이터의 분포를 고려하는 축인 이유
 
-![Ch_02%20Natural%20Language%20and%20Distributional%20Represen%200b7926973e0148998a8b5206e887722e/Untitled.png](Ch_02%20Natural%20Language%20and%20Distributional%20Represen%200b7926973e0148998a8b5206e887722e/Untitled.png)
+![image](https://user-images.githubusercontent.com/68596881/105756610-2a078f80-5f90-11eb-8fdf-606b2e466801.png)
 
 특이값이 크기순으로 대각행렬을 이룰 경우 u와 v를 정규화된 벡터이므로 내적값은 -1과 1사이의 값을 갖는다.  그러므로 A의 각 성분의 크기는 각 특이값에 의해 정해진다. 따라서, A의 값들의 분포를 생각할 때, 큰 특이값에 대응되는 벡터(축)이 데이터의 분포에 큰 영향을 주는 축인 것을 알 수 있다.
