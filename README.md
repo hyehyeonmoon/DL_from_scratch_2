@@ -19,22 +19,12 @@
 ## 요구사항
 소스 코드를 실행하려면 아래의 소프트웨어가 설치되어 있어야 합니다.
 
+```
 * 파이썬 3.x
 * NumPy
 * Matplotlib
 
 ※ Python은 3 버전을 이용합니다.
-
-## 실행 방법
-
-각 장의 디렉터리로 이동한 후 파이썬 명령을 실행하세요(**다른 디렉터리에서는 제대로 실행되지 않을 수 있습니다!**).
-
-```
-$ cd ch01
-$ python man.py
-
-$ cd ../ch05
-$ python train_nueralnet.py
 ```
 
 ## [Contributor]
