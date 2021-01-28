@@ -28,6 +28,8 @@
 단어의 분산표현도 정밀도 면에서 Skip-gram 모델의 결과가 좋다. 특히 말뭉치가 커질수록 저빈도 단어나 유추의 성능에 좋다. 그러나 학습속도는 CBOW 모델이 더 빠르다. 그 이유는 Skip-gram 모델은 손실을 맥락의 수만큼 구해야하기 때문이다.
 
 
+
+
 **[정리]**
 
 - 추론 기반 기법은 추측하는 것이 목적이며, 그 부산물로 단어의 분산 표현을 얻을 수 있다.
@@ -38,11 +40,16 @@
 - word2vec은 가중치를 다시 학습할 수 있으므로, 단어의 분산 표현 갱신이나 새로운 단어 추가를 효율적으로 수행
 
 
+
+
 **[파일 설명]**
 cbow_predict : cbow 모델의 추론 처리를 구현한 코드입니다.
 simple_cbow : simpole_cbow 모델을 구현한 코드입니다.
 simple_skip_gram : skip_gram 모델을 구현한 코드입니다.
 train : simple_cbow으로 'You say goodbye and I say hello.' 학습하는 코드입니다.
+
+
+
 
 **[심화]**
 
@@ -66,14 +73,18 @@ P(gas |ice)/P(gas|steam)은 1보다 훨씬 작은 값(0.0085)이고. ice, steam�
 **이렇게 특정단어 k가 주어졌을 때 밀집벡터(임베딩)된 두 단어벡터의 내적이 두 단어의 동시등장확률 비율이 되도록 임베딩하였다.** solid가 주어지면 ice와 벡터사이의 내적값이 8.9가 되도록 하자는 뜻이다. 
 
 **목적함수**
+
+<br>
+
 ![6](https://user-images.githubusercontent.com/63804074/106189359-8aded400-61eb-11eb-80fb-c96ba5bf8731.jpg)
 ![2](https://user-images.githubusercontent.com/63804074/106189176-46533880-61eb-11eb-80aa-5cf9438d9752.jpg)
 ![3](https://user-images.githubusercontent.com/63804074/106189178-46ebcf00-61eb-11eb-8ba0-fe18d11d38cb.jpg)
 ![4](https://user-images.githubusercontent.com/63804074/106189181-46ebcf00-61eb-11eb-96b0-bf3296f71660.jpg)
 ![5](https://user-images.githubusercontent.com/63804074/106189183-47846580-61eb-11eb-80b7-672a177471e9.jpg)
 
-- 정리
+**[심화내용 정리]**
 Glove는 동시등장확률을 사용하여 말뭉치 전체의 통계정보를 손실함수에 도입하여 미니배치학습을하는 추론기반기법과 통계기반기법을 융합하였다.
 
+**[출처]**
 glove : https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/04/09/glove/
 LSA 설명 : https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/04/06/pcasvdlsa/
