@@ -86,8 +86,9 @@ P(gas |ice)/P(gas|steam)은 1보다 훨씬 작은 값(0.0085)이고. ice, steam�
 ![6](https://user-images.githubusercontent.com/63804074/106189359-8aded400-61eb-11eb-80fb-c96ba5bf8731.jpg)
 ![2](https://user-images.githubusercontent.com/63804074/106189176-46533880-61eb-11eb-80aa-5cf9438d9752.jpg)
 ![3](https://user-images.githubusercontent.com/63804074/106189178-46ebcf00-61eb-11eb-8ba0-fe18d11d38cb.jpg)
-![4](https://user-images.githubusercontent.com/63804074/106189181-46ebcf00-61eb-11eb-96b0-bf3296f71660.jpg)
-![5](https://user-images.githubusercontent.com/63804074/106189183-47846580-61eb-11eb-80b7-672a177471e9.jpg)
+![7](https://user-images.githubusercontent.com/63804074/106253164-7b4aa400-625a-11eb-866d-1c8fc89d475d.jpg)
+![8](https://user-images.githubusercontent.com/63804074/106253169-7c7bd100-625a-11eb-90bc-03fa966f8bd4.jpg)
+
 
 **[심화내용 정리]**
 Glove는 동시등장확률을 사용하여 말뭉치 전체의 통계정보를 손실함수에 도입하여 미니배치학습을하는 추론기반기법과 통계기반기법을 융합하였다.
