@@ -17,6 +17,7 @@
 분산 표현의 측면에서 **통계 기반 기법**에서는 단어의 유사성이 인코딩되는 반면 **추론 기반 기법**은 단어의 유사성은 물론 단어사이의 패턴도 파악되어 인코딩 된다.
 
 **인코딩** : 은닉층의 정보
+<br>
 **디코딩** : 인코딩된 정보로부터 원하는 결과를 얻는 작업
 
 **word2vec**의 구조
@@ -43,10 +44,15 @@
 
 
 **[파일 설명]**
+
 cbow_predict : cbow 모델의 추론 처리를 구현한 코드입니다.
+<br>
 simple_cbow : simpole_cbow 모델을 구현한 코드입니다.
+<br>
 simple_skip_gram : skip_gram 모델을 구현한 코드입니다.
+<br>
 train : simple_cbow으로 'You say goodbye and I say hello.' 학습하는 코드입니다.
+<br>
 
 
 
@@ -56,7 +62,8 @@ train : simple_cbow으로 'You say goodbye and I say hello.' 학습하는 코드
 - Glove
 Glove는 기존의 카운트 기반의 LSA(latent semantic analysis)와 예측 기반의 word2vec의 단점을 보완하기 위해 등장하였다. 
 
-LSA : TDM, TF-IDF 행렬같이 각 문서에서 각 단어의 빈도수를 카운트한 행렬을 축소하여 잠재된 의미를 끌어오는 방법
+LSA : TDM, TF-IDF 행렬같이 각 문서에서 각 단어의 빈도수를 카운트한 행렬을 축소하여 잠재된 의미를 끌어오는 방법 
+<br>
 Word2vec : 실제값과 예측값에 대한 오차를 손실함수를 통해 줄여나가며 학습하는 예측기반의 방법론이다.
 
 LSA는 말뭉치 전체의 통계적인 정보를 모두 활용하지만, LSA 결과물을 가지고 단어/문서간 유사도 측정이 어렵다.
