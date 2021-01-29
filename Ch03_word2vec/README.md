@@ -95,4 +95,5 @@ Glove는 동시등장확률을 사용하여 말뭉치 전체의 통계정보를 
 
 **[출처]**
 glove : https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/04/09/glove/
+<br>
 LSA 설명 : https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/04/06/pcasvdlsa/
