@@ -51,7 +51,7 @@
 
 [_(cs224n-2020-lecture08-nmt).pdf](https://github.com/hyehyeonmoon/DL_from_scratch_2/files/5927508/_.cs224n-2020-lecture08-nmt.pdf)
 
-(https://user-images.githubusercontent.com/55529617/106932426-1233c680-675b-11eb-9222-e997d665d277.png)
+![Untitled 1](https://user-images.githubusercontent.com/55529617/106932426-1233c680-675b-11eb-9222-e997d665d277.png)
 
 - 확률이어서 점수는 모두 음수이지만, 더 높은 점수일수록 더 좋은 문장
 - 최적의 방안을 보장하지는 못해도 완전탐색 알고리즘보다는 매우 효율적임
@@ -62,7 +62,7 @@
 
 →길이로 정규화를 시켜줌
 
-(https://user-images.githubusercontent.com/55529617/106932428-12cc5d00-675b-11eb-99b9-b9a196aff486.png)
+![Untitled 2](https://user-images.githubusercontent.com/55529617/106932428-12cc5d00-675b-11eb-99b9-b9a196aff486.png)
 
 ## Standford cs224n : 수업 중 나온 좋은 질문들 정리
 
