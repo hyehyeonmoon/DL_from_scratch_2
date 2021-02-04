@@ -1,16 +1,13 @@
 ## [5장 순환신경망(RNN)]
-```
-언어 모델은 단어 나열에 확률을 부여하는 모델로, 평가 방법은 Perplexity가 있다.
-```
-```
-RNN은 순환하는 경로이다. 같은 가중치를 사용함으로서 은닉 상태(순서)를 기억해 시계열 데이터, 자연어처리에 주로 사용이 된다.
-```
-```
-긴 시계열 데이터를 학습할 때는 데이터를 적당한 길이씩 모으고(이를 "블록"이라 한다.), 블록 단위로 BPTT에 의한 학습을 수행한다(=Truncated BPTT)
-```
-```
-RNN 구현을 mini-batch size를 처리할 수 있도록 구현하였고, RNN을 이용한 LM 또한 Embedding, RNN, Affine, Softmax 층을 가진 Language Model을 구현하여 PTB dataset으로 실습을 해보았다.
-```
+
+- 언어 모델은 단어 나열에 확률을 부여하는 모델로, 평가 방법은 Perplexity가 있다.
+
+- RNN은 순환하는 경로이다. 같은 가중치를 사용함으로서 은닉 상태(순서)를 기억해 시계열 데이터, 자연어처리에 주로 사용이 된다.
+
+- 긴 시계열 데이터를 학습할 때는 데이터를 적당한 길이씩 모으고(이를 "블록"이라 한다.), 블록 단위로 BPTT에 의한 학습을 수행한다(=Truncated BPTT)
+
+- RNN 구현을 mini-batch size를 처리할 수 있도록 구현하였고, RNN을 이용한 LM 또한 Embedding, RNN, Affine, Softmax 층을 가진 Language Model을 구현하여 PTB dataset으로 실습을 해보았다.
+
 
 ## [정리]
 
@@ -54,7 +51,7 @@ RNN 구현을 mini-batch size를 처리할 수 있도록 구현하였고, RNN을
 
 [_(cs224n-2020-lecture08-nmt).pdf](https://github.com/hyehyeonmoon/DL_from_scratch_2/files/5927508/_.cs224n-2020-lecture08-nmt.pdf)
 
-d 1](https://user-images.githubusercontent.com/55529617/106932426-1233c680-675b-11eb-9222-e997d665d277.png)
+(https://user-images.githubusercontent.com/55529617/106932426-1233c680-675b-11eb-9222-e997d665d277.png)
 
 - 확률이어서 점수는 모두 음수이지만, 더 높은 점수일수록 더 좋은 문장
 - 최적의 방안을 보장하지는 못해도 완전탐색 알고리즘보다는 매우 효율적임
@@ -65,7 +62,7 @@ d 1](https://user-images.githubusercontent.com/55529617/106932426-1233c680-675b-
 
 →길이로 정규화를 시켜줌
 
-d 2](https://user-images.githubusercontent.com/55529617/106932428-12cc5d00-675b-11eb-99b9-b9a196aff486.png)
+(https://user-images.githubusercontent.com/55529617/106932428-12cc5d00-675b-11eb-99b9-b9a196aff486.png)
 
 ## Standford cs224n : 수업 중 나온 좋은 질문들 정리
 
