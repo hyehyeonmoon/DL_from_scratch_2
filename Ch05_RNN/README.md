@@ -1,16 +1,16 @@
-# Ch05_RNN
-
-생성일: 2021년 2월 4일 오전 10:57
-
 ## [5장 순환신경망(RNN)]
-
+```
 언어 모델은 단어 나열에 확률을 부여하는 모델로, 평가 방법은 Perplexity가 있다.
-
+```
+```
 RNN은 순환하는 경로이다. 같은 가중치를 사용함으로서 은닉 상태(순서)를 기억해 시계열 데이터, 자연어처리에 주로 사용이 된다.
-
+```
+```
 긴 시계열 데이터를 학습할 때는 데이터를 적당한 길이씩 모으고(이를 "블록"이라 한다.), 블록 단위로 BPTT에 의한 학습을 수행한다(=Truncated BPTT)
-
+```
+```
 RNN 구현을 mini-batch size를 처리할 수 있도록 구현하였고, RNN을 이용한 LM 또한 Embedding, RNN, Affine, Softmax 층을 가진 Language Model을 구현하여 PTB dataset으로 실습을 해보았다.
+```
 
 ## [정리]
 
@@ -22,9 +22,15 @@ RNN 구현을 mini-batch size를 처리할 수 있도록 구현하였고, RNN을
 - 언어 모델은 단어 시퀀스를 확률로 해석한다.
 - RNN 계층을 이용한 조건부 언어 모델은(이론적으로는) 그때까지 등장한 모든 단어의 정보를 기억할 수 있다.
 
+
 ## [파일 설명]
 
-[제목 없음](https://www.notion.so/35231c9dcedc4334ad89eb095c1698d5)
+|File|Description|
+|:-- |:-- |
+|simple_rnnlm|rnn language model을 구현한 class|
+|train_custom_loop|ptb dataset을 이용해 rnn language model 실습|
+|train|trainer 파일을 이용해 체계적인 실습 구현|
+|class_summary|Ch05에서 사용한 모든 클래스 및 모델들을 정리해 놓은 파일|
 
 ## [심화 내용]
 
@@ -36,7 +42,7 @@ RNN 구현을 mini-batch size를 처리할 수 있도록 구현하였고, RNN을
 
 따라서 NMT에서 Greedy decoding을 사용했을 때, 문제가 발생함
 
-![Ch05_RNN%204444c1d94f884a5e8a5feabcf5b53f0c/Untitled.png](Ch05_RNN%204444c1d94f884a5e8a5feabcf5b53f0c/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/55529617/106932431-1364f380-675b-11eb-9f69-bd68c70bf57f.png)
 
 **② Exhaustive Search decoding(완전탐색 알고리즘)**
 
@@ -46,9 +52,9 @@ RNN 구현을 mini-batch size를 처리할 수 있도록 구현하였고, RNN을
 
 - Beam search Decoding : On each step of decoder, keep track of the k(beam size) most probable partial translations(which we call hypotheses)
 
-[Ch05_RNN%204444c1d94f884a5e8a5feabcf5b53f0c/_(cs224n-2020-lecture08-nmt).pdf](Ch05_RNN%204444c1d94f884a5e8a5feabcf5b53f0c/_(cs224n-2020-lecture08-nmt).pdf)
+[_(cs224n-2020-lecture08-nmt).pdf](https://github.com/hyehyeonmoon/DL_from_scratch_2/files/5927508/_.cs224n-2020-lecture08-nmt.pdf)
 
-![Ch05_RNN%204444c1d94f884a5e8a5feabcf5b53f0c/Untitled%201.png](Ch05_RNN%204444c1d94f884a5e8a5feabcf5b53f0c/Untitled%201.png)
+d 1](https://user-images.githubusercontent.com/55529617/106932426-1233c680-675b-11eb-9222-e997d665d277.png)
 
 - 확률이어서 점수는 모두 음수이지만, 더 높은 점수일수록 더 좋은 문장
 - 최적의 방안을 보장하지는 못해도 완전탐색 알고리즘보다는 매우 효율적임
@@ -59,7 +65,7 @@ RNN 구현을 mini-batch size를 처리할 수 있도록 구현하였고, RNN을
 
 →길이로 정규화를 시켜줌
 
-![Ch05_RNN%204444c1d94f884a5e8a5feabcf5b53f0c/Untitled%202.png](Ch05_RNN%204444c1d94f884a5e8a5feabcf5b53f0c/Untitled%202.png)
+d 2](https://user-images.githubusercontent.com/55529617/106932428-12cc5d00-675b-11eb-99b9-b9a196aff486.png)
 
 ## Standford cs224n : 수업 중 나온 좋은 질문들 정리
 
