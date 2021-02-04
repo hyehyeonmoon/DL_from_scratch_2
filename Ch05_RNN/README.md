@@ -45,11 +45,11 @@
 
 말 그대로 step t에서 완성문장의 모든 확률을 고려해서 선택하는 것=>계산비용이 매우 큼!
 
-**③ Beam search Decoding(ppt 31p 참고)**
+**③ Beam search Decoding**
 
 - Beam search Decoding : On each step of decoder, keep track of the k(beam size) most probable partial translations(which we call hypotheses)
 
-[_(cs224n-2020-lecture08-nmt).pdf](https://github.com/hyehyeonmoon/DL_from_scratch_2/files/5927508/_.cs224n-2020-lecture08-nmt.pdf)
+[_(cs224n-2020-lecture08-nmt).pdf](https://github.com/hyehyeonmoon/DL_from_scratch_2/files/5927508/_.cs224n-2020-lecture08-nmt.pdf)의 beam searching 예시 참고.
 
 ![Untitled 1](https://user-images.githubusercontent.com/55529617/106932426-1233c680-675b-11eb-9222-e997d665d277.png)
 
