@@ -64,44 +64,4 @@
 
 ![Untitled 2](https://user-images.githubusercontent.com/55529617/106932428-12cc5d00-675b-11eb-99b9-b9a196aff486.png)
 
-## Standford cs224n : 수업 중 나온 좋은 질문들 정리
 
-1. RNN에서 같은 weight을 주는 것은 설계할 때 내가 주는 가정인가요?
-
-not a assumption, it's more a deliberate decision in the design of an RNN
-
-2. RNN에서 같은 weight을 주는 것은 왜 좋은가요?
-
-fixed-window language model에서 단점으로 언급되었듯이 일부 weight이 특정 단어에만 특화되는 문제가 있었는데 weight을 똑같이 하면 모든 단어에 대해서 학습 가증해서 더 generalization,
-
-즉 test에 어떤 문장이 와도 성능이 좋아질 것이다.
-
-3. 단어들은 다 다른데 weight을 똑같이 주면 다양한 단어의 특성이 반영이 안 되는 것 아닌가요?
-
-weight이 아주 큰 matrix라는 점을 감안할 때 많은 단어의 특성을 store 할 수 있고,
-
-단어의 다양성은 weight matrix가 얼마나 그 정보양을 store 할 수 있느냐가 관건이다.
-
-4. What length is the input during training?
-
-Efficiency concern or data based
-
-5. Does Wh(one of weights) depend on the length you used?
-
-no. the model size doesn't increase for longer input. 길어지더라도 새로운 weight이 더 추가되는 게 아니기 때문이다.
-
-6. How do we choose the dimension of the lowercase Es?
-
-자유선택 or download word2vec의 사이즈에 따라서 선택한다.
-
-7. How you decide to break up your batches affects how you learn?
-
-shuffling it differently each epoch
-
-SGD consider : it should be a good enough approximation that over many steps you will minimize you rloss
-
-8. IS it ever practical to combine RNNs with a list of hand-written rules?
-
-ex)had written rules : don't let you sentence be longer than this many words⇒hacky rules
-
-Beam search가 대표적인 예시로 이후 NMT 에서 배운다.
