@@ -64,4 +64,5 @@
 
 ![Untitled 2](https://user-images.githubusercontent.com/55529617/106932428-12cc5d00-675b-11eb-99b9-b9a196aff486.png)
 
-
+[출처]  
+[stanford CS224N: NLP with Deep Learning](https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1194/)
