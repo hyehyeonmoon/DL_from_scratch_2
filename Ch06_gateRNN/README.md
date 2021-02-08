@@ -29,19 +29,13 @@ LSTM 모델을 구현하고, ptb 데이터셋을 이용해 학습을 진행했�
 
 ## GRU(Gated Recurrent Unit)
 
-![Ch06_%20%E1%84%80%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%B3%E1%84%80%E1%85%A1%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%E1%84%83%E1%85%AC%E1%86%AB%20RNN%2081d199877d4444aa91d38cf6fea2eccc/Untitled.png](Ch06_%20%E1%84%80%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%B3%E1%84%80%E1%85%A1%20%E1%84%8E%E1%85%AE%E1%84%80%E1%85%A1%E1%84%83%E1%85%AC%E1%86%AB%20RNN%2081d199877d4444aa91d38cf6fea2eccc/Untitled.png)
+![image](https://user-images.githubusercontent.com/68596881/107239168-f175b480-6a6b-11eb-801c-207af70c0fd6.png)
 
 **r: reset gate**
 
 **z: update gate**
 
-$z = \sigma(x_tW_x^{(z)} + h_{t-1}W_{h}^{(z)}+b^{(z)})$ ...(1)
-
-$r = \sigma(x_tW_x^{(r)} + h_{t-1}W_{h}^{(r)}+b^{(r)})$ ...(2)
-
-$\tilde{h} = tanh(x_{t}W_{x} + (r\odot h_{t-1})W_{h} + b)$ ...(3)
-
-$h_{t} = (1-z)\odot h_{t-1} + z\odot \tilde{h}$ ...(4)
+![image](https://user-images.githubusercontent.com/68596881/107239192-f6d2ff00-6a6b-11eb-964c-4f1d89e66330.png)
 
 reset 게이트는 과거의 은닉 상태를 얼마나 '무시'할지를 정합니다. 만약 r이 0이면, 식 (3)으로부터 , 새로운 은닉 상태는 입력만으로 결정됩니다.
 
