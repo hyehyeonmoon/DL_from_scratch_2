@@ -51,11 +51,28 @@ rnnlm_gen.py/rnnlm.py/Rnnlm.pkl/better_rnnlm.py : 위의 코드를 구동시키�
 ![image](https://user-images.githubusercontent.com/63804074/107877690-4e141c00-6f11-11eb-83f8-4c66cee5e25d.png)
 <RnnLM>
 
-seqseq와 RNNLM의 차이는 인코더에서 만든 h(은닉상태 벡터)를 입력받는다는 점만 다르다. 이 차이는 평범한 언어 보델
+seqseq와 RNNLM의 차이는 인코더에서 만든 h(은닉상태 벡터)를 입력받는다는 점만 다르다.
+
+### 교사 강요(teaching force)
+
+학습과정에서 이전 시점의 디코더 셀의 예측이 틀렸는데 이를 현재 시점의 디코더 입력으로 사용하면 현재 시점의 디코더 예측이 잘못될 수 있고 이는 디코더 전체의 예측을 어렵게하고 학습시간을 늦춘다. 이를 방지하기 위해 디코더 셀의 예측값 대신 실제값을 현재 시점의 디코더 셀의 입력으로 사용하여 학습하는 방식을 **교사강요**방식이라 한다.
+
+input: Mary had a little lamb whose fleece was white as snow
+decoder : [START] Mary had a little lamb whose fleece was white as snow [END]
+
+만약 학습과정에서 [start]다음으로 Mary가 아닌 a를 예측하고
+[start] a 다음 단어를 예측한다면
+학습과정에서 학습이 느려지고 모델이 불안정해진다.
+
+**교사강요**를 사용한다면
+[start] 다음으로 실제값인 Mary로 학습하고
+[start] mary 다음으로 had를 학습함으로써 빠르게 학습하게 된다.
+
 
 
 
 **[출처]**
 Sooftware 머신러닝: 
 https://m.blog.naver.com/PostView.nhn?blogId=sooftware&logNo=221784419691&proxyReferer=https:%2F%2Fwww.google.com%2F
- 딥 러닝을 이용한 자연어 처리 입문 : https://wikidocs.net/46496
+ 딥 러닝을 이용한 자연어 처리 입문 : https://wikidocs.net/24996
+ What is Teacher Forcing for Recurrent Neural Networks? : https://machinelearningmastery.com/teacher-forcing-for-recurrent-neural-networks/
