@@ -67,8 +67,9 @@ seqseq와 RNNLM의 차이는 인코더에서 만든 h(은닉상태 벡터)를 �
 
 ![image](https://user-images.githubusercontent.com/63804074/107919031-07283400-6fae-11eb-8418-db7b0b59de29.png)
 <br>
-
 **<틀린 예측>**
+<br>
+
 ![image](https://user-images.githubusercontent.com/63804074/107919045-0db6ab80-6fae-11eb-9bf1-17f5dd8f2e78.png)
 <br>
 
