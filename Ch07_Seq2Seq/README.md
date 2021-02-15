@@ -55,7 +55,8 @@ seqseq와 RNNLM의 차이는 인코더에서 만든 h(은닉상태 벡터)를 �
 
 ### 교사 강요(teaching force)
 
-학습과정에서 이전 시점의 디코더 셀의 예측이 틀렸는데 이를 현재 시점의 디코더 입력으로 사용하면 현재 시점의 디코더 예측이 잘못될 수 있고 이는 디코더 전체의 예측을 어렵게하고 학습시간을 늦춘다. 이를 방지하기 위해 디코더 셀의 예측값 대신 실제값을 현재 시점의 디코더 셀의 입력으로 사용하여 학습하는 방식을 **교사강요**방식이라 한다.
+학습과정에서 이전 시점의 디코더 셀의 예측이 틀렸는데 이를 현재 시점의 디코더 입력으로 사용하면 현재 시점의 디코더 예측이 잘못될 수 있고 이는 디코더 전체의 예측을 어렵게하고 학습시간을 늦춘다. 
+이를 방지하기 위해 디코더 셀의 예측값 대신 실제값을 현재 시점의 디코더 셀의 입력으로 사용하여 학습하는 방식을 **교사강요**방식이라 한다.
 
 ![image](https://user-images.githubusercontent.com/63804074/107919023-02fc1680-6fae-11eb-90bf-ca75c104c395.png)
 <정확한 예측>
@@ -71,8 +72,8 @@ seqseq와 RNNLM의 차이는 인코더에서 만든 h(은닉상태 벡터)를 �
 **교사강요**를 사용한다면
 학습이 빠르다는 장점이 있다. 하지만 학습과정에 실제값을 넣어서 예측하기 때문에 예측과정에서는 실제값을 기반으로 예측하기때문에 편향문제가 있을 수 있다.
 
-(T. He, J. Zhang, Z. Zhou, and J. Glass. Quantifying Exposure Bias for Neural Language Generation (2019), arXiv.)
-위 논문에 따르면 노출 편향 문젝 생각만큼 큰 영향을 미치지 않는다고 한다.
+*(T. He, J. Zhang, Z. Zhou, and J. Glass. Quantifying Exposure Bias for Neural Language Generation (2019), arXiv.)
+위 논문에 따르면 노출 편향 문젝 생각만큼 큰 영향을 미치지 않는다고 한다.*
 
 ~~~python
 teacher_forcing_ratio = 0.5
@@ -134,8 +135,11 @@ def train(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, deco
 **[출처]**
 Sooftware 머신러닝: 
 https://blog.naver.com/PostView.nhn?blogId=sooftware&logNo=221790750668&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView
-
+<br>
  딥 러닝을 이용한 자연어 처리 입문 : https://wikidocs.net/24996
+ <br>
  What is Teacher Forcing for Recurrent Neural Networks? : https://machinelearningmastery.com/teacher-forcing-for-recurrent-neural-networks/
+ <br>
  자기회귀 속성과 Teacher Forcing 훈련 방법 : https://kh-kim.gitbook.io/natural-language-processing-with-pytorch/00-cover-9/05-teacher-forcing
+ <br>
  교사강요 코드: https://www.tensorflow.org/tutorials/text/nmt_with_attention?hl=ko
