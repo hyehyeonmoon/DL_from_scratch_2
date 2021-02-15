@@ -46,28 +46,35 @@ rnnlm_gen.py/rnnlm.py/Rnnlm.pkl/better_rnnlm.py : 위의 코드를 구동시키�
 ### seqseq_Decoder vs RNNLM
 
 ![image](https://user-images.githubusercontent.com/63804074/107877700-5b310b00-6f11-11eb-811d-37bb020c0190.png)
-<seqseq_decoder>
+<br>
+**<seqseq_decoder>**
 
 ![image](https://user-images.githubusercontent.com/63804074/107877690-4e141c00-6f11-11eb-83f8-4c66cee5e25d.png)
-<RnnLM>
+<br>
+**<Rnn_LM>**
 
 seqseq와 RNNLM의 차이는 인코더에서 만든 h(은닉상태 벡터)를 입력받는다는 점만 다르다.
 
 ### 교사 강요(teaching force)
 
-학습과정에서 이전 시점의 디코더 셀의 예측이 틀렸는데 이를 현재 시점의 디코더 입력으로 사용하면 현재 시점의 디코더 예측이 잘못될 수 있고 이는 디코더 전체의 예측을 어렵게하고 학습시간을 늦춘다. 
+학습과정에서 이전 시점의 디코더 셀의 예측이 틀렸는데 이를 현재 시점의 디코더 입력으로 사용하면 현재 시점의 디코더 예측이 잘못될 수 있고 
+이는 디코더 전체의 예측을 어렵게하고 학습시간을 늦춘다. 
 이를 방지하기 위해 디코더 셀의 예측값 대신 실제값을 현재 시점의 디코더 셀의 입력으로 사용하여 학습하는 방식을 **교사강요**방식이라 한다.
 
 ![image](https://user-images.githubusercontent.com/63804074/107919023-02fc1680-6fae-11eb-90bf-ca75c104c395.png)
-<정확한 예측>
+<br>
+**<정확한 예측>**
 ![image](https://user-images.githubusercontent.com/63804074/107919031-07283400-6fae-11eb-8418-db7b0b59de29.png)
-<틀린 예측>
+<br>
+**<틀린 예측>**
 ![image](https://user-images.githubusercontent.com/63804074/107919045-0db6ab80-6fae-11eb-9bf1-17f5dd8f2e78.png)
-<교사강요>
+<br>
+**<교사강요>**
 
 
 ![image](https://user-images.githubusercontent.com/63804074/107918690-7a7d7600-6fad-11eb-9b04-a907cfc168fe.png)
-<교사강요 구조>
+<br>
+**<교사강요 구조>**
 
 **교사강요**를 사용한다면
 학습이 빠르다는 장점이 있다. 하지만 학습과정에 실제값을 넣어서 예측하기 때문에 예측과정에서는 실제값을 기반으로 예측하기때문에 편향문제가 있을 수 있다.
