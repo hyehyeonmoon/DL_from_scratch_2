@@ -31,11 +31,11 @@ seq2seq를 개선하기 위해서, 먼저 Encoder의 출력의 길이를 입력 
 
 ## [심화]
 
-## Self Attention의 의미
+### Self Attention의 의미
 
 앞서 배운 어텐션 함수는 주어진 '쿼리(Query)'에 대해서 모든 '키(Key)'와의 유사도를 각각 구합니다. 그리고 구해낸 이 유사도를 가중치로 하여 키와 맵핑되어있는 각각의 '값(Value)'에 반영해줍니다. 그리고 유사도가 반영된 '값(Value)'을 모두 가중합하여 리턴합니다.
 
-![Ch08%20Attention%2015dbc80949124f9b9430f89a12b86c1d/Untitled.png](Ch08%20Attention%2015dbc80949124f9b9430f89a12b86c1d/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/66687384/108496577-9787b100-72ed-11eb-8755-50a845de62c9.png)
 
  이 때의 Q, K, V를 정의하면 다음과 같습니다.
 
@@ -55,15 +55,15 @@ V = Values : 모든 시점의 인코더 셀의 은닉 상태들
 K : 입력 문장의 모든 단어 벡터들
 V : 입력 문장의 모든 단어 벡터들
 
-![Ch08%20Attention%2015dbc80949124f9b9430f89a12b86c1d/Untitled%201.png](Ch08%20Attention%2015dbc80949124f9b9430f89a12b86c1d/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/66687384/108496606-a2424600-72ed-11eb-90bf-8cb046c2f78d.png)
 
 셀프 어텐션은 입력 문장의 각 단어 벡터들로부터 Q벡터, K벡터, V벡터를 얻는 작업을 거치고 행렬 연산을 통해 결과값을 냅니다.
 
-![Ch08%20Attention%2015dbc80949124f9b9430f89a12b86c1d/Untitled%202.png](Ch08%20Attention%2015dbc80949124f9b9430f89a12b86c1d/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/66687384/108496607-a2dadc80-72ed-11eb-990c-e5fe76c81b8e.png)
 
 예시) I am a student 이라는 문장이 있으면 I , am, a, student들은 각각의 Q, K, V 벡터를 얻게 된다.
 
-![Ch08%20Attention%2015dbc80949124f9b9430f89a12b86c1d/Untitled%203.png](Ch08%20Attention%2015dbc80949124f9b9430f89a12b86c1d/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/66687384/108496608-a2dadc80-72ed-11eb-8484-1125eb978679.png)
 
 어텐션 스코어를 이용해 어텐션 분포를 구하고, 이를 사용하여 모든 단어에 대한 어텐션 값을 구한다.
 
@@ -71,7 +71,7 @@ V : 입력 문장의 모든 단어 벡터들
 
 ### 셀프 어텐션의 효과
 
-![Ch08%20Attention%2015dbc80949124f9b9430f89a12b86c1d/Untitled%204.png](Ch08%20Attention%2015dbc80949124f9b9430f89a12b86c1d/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/66687384/108496603-a1111900-72ed-11eb-8d04-a6ace4bf19cf.png)
 
  위의 예시 문장을 번역하면 '그 동물은 길을 건너지 않았다. 왜냐하면 그것은 너무 피곤하였기 때문이다.' 라는 의미가 됩니다. 여기서 그것(it)에 해당하는 것은 과연 길(street)일까요? 동물(animal)일까요? 사람은 피곤한 주체가 동물이라는 것을 아주 쉽게 알 수 있지만 기계는 그렇지 않습니다. 하지만 셀프 어텐션은 입력 문장 내의 단어들끼리 유사도를 구하므로서 그것(it)이 동물(animal)과 연관되었을 확률이 높다는 것을 찾아냅니다.
 
